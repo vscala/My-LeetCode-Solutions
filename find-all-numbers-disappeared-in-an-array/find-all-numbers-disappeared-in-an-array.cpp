@@ -16,10 +16,3 @@ public:
         return out;
     }
 };
-
-        /*
-            put nums in sorted order
-            if num > len(nums) append it to end
-            
-            go over nums again and add missing to output array
-        */
