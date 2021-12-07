@@ -5,9 +5,8 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        heap = []
-        for i, lst in enumerate(lists):
-            if lst: heappush(heap, (lst.val, i))
+        heap = [(lst.val, i) for i, lst in enumerate(lists) if lst]
+        heapify(heap)
         cur = out = ListNode()
         while heap:
             v, i = heappop(heap)
